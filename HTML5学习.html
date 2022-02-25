@@ -1,0 +1,526 @@
+<!DOCTYPE html>    <!--HTML5版本声明<-->
+<html>		
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>HTML5学习</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="" rel="stylesheet">   <!--CSS用法，引入， href路径-->
+  <script src="引入js路径"  type="text/javascript"></script> <!--js引入-->
+</head>
+<body >
+	<h2><b>bgcolor 背景颜色： 1颜色名 2RGB色 316进制 <br>
+	   所有标签都有的属性： <br>
+	                   id属性： 用来标识元素的唯一性 <br>
+	                   name属性： 用来提交数据时的参数名 <br>
+	                   style属性： 设置元素的行内样式  具体的样式<br>
+	                   class属性： 设置元素的样式名 <br>
+	               </b>
+	</h2>     
+
+
+<ol type="I" >
+		<li><h2>标题标签</h2></li>
+	<!-- 标题标签 <h1></h1>到 <h6></h6> 依次从大到小 -->
+	<h1>HELLO</h1>   <!-- h1标签可以被搜索引擎获取 -->
+	<h2>HELLO</h2>
+	<h3>HELLO</h3>
+	<h4>HELLO</h4>
+	<h5>HELLO</h5>
+	<h6>HELLO</h6>
+
+
+
+
+
+
+
+	<hr width=100% size="20">
+   <li><h2><a name="hr">锚点</a><br>水平线标签</h2></li>
+   <!-- 水平线标签 hr --> 
+   <!-- align 对齐方式 left right center(默认) -->
+   <!-- size -->
+   <hr width="50%" align="left" size="5"/>
+   <hr width="500px" align="right" size="10" />  
+
+   
+
+
+
+
+	<li><h2>段落自动换行</h2></li>
+	<!--<p></p> 段落会自动换行 
+        align: left默认 right center justify两段对齐-->
+    <!--<br/>回车换行 br换行间隙比p标签小-->
+   <p>段落会自动换行 align: left（默认） right center justify两段对齐
+   </p>
+
+   <p align="right">段落会自动换行 align: right 段落会自动换行 align: right 
+                    段落会自动换行 align: right 
+                    段落会自动换行 align: right 
+                    段落会自动换行 align: right 
+   					段落会自动换行 align: right 
+  
+   </p>
+
+   <p align="center">段落会自动换行 align: center 段落会自动换行 align: center段落会自动换行 align: center段落会自动换行 align: center段落会自动换行 align: center段落会自动换行 align: center段落会自动换行 align: center段落会自动换行 align: center段落会自动换行 align: center段落会自动换行 align: center
+   </p>
+
+   <p align="justify">段落会自动换行 align:justify两段对齐 段落会自动换行 align:justify两段对齐段落会自动换行 align:justify两段对齐段落会自动换行 align:justify两段对齐段落会自动换行 align:justify两段对齐段落会自动换行 align:justify两段对齐段落会自动换行 align:justify两段对齐段落会自动换行 align:justify两段对齐段落会自动换行 align:justify两段对齐
+   </p>
+
+
+   Hello <br/> world
+
+
+
+
+    <!-- 列表
+    	    无序列表
+    	           <ul>
+    	           	    <li> </li>
+    	           </ul>
+    	           常用属性：
+    	                  type   列表的图标
+    	                         square  实心方块
+    	                         circle  空心圆
+    	                         disc    实心圆 默认
+    	    有序列表
+    	            <ol>
+    	            	<li></li>
+    	            </ol>
+    	            常用属性
+    	                  type 
+    	                        1  数字序号
+    	                        a  小写字母
+    	                        A  大写字母
+    	                        i  小写罗马字母
+    	                        I  大写罗马字母
+    -->
+	<li><h2>列表</h2></li>
+    <h3>无序列表 ul</h2>
+	<ul>
+       <li><ul>
+       	默认“disc”空心圆 <br>
+       	<li>第一</li>
+       	<li>第二</li>
+       	<li>第三</li>
+       </ul>
+       <br>
+   	   </li>
+
+
+
+       <li><ul type="square">
+       	方块图标 <br>
+       	<li>第一</li>
+       	<li>第二</li>
+       	<li>第三</li>
+       </ul></li>
+       <br>
+
+       <li><ul type="circle">
+       	实心圆图标  <br>
+       	<li>第一</li>
+       	<li>第二</li>
+       	<li>第三</li>
+       </ul></li>
+   	</ul>
+   	<h3>有序列表 ol</h3>
+   		<ol>
+   			<li>默认数字符号
+   				<ol>
+   					<li>第一</li>
+   					<li>第二</li>
+   					<li>第三</li>
+   				</ol>
+   			</li>
+   			<li>小写字母
+   				<ol type="a">
+   					<li>第一</li>
+   					<li>第二</li>
+   					<li>第三</li>
+   				</ol>
+   			</li>
+   			<li>大写字母
+   				<ol type="A">
+   					<li>第一</li>
+   					<li>第二</li>
+   					<li>第三</li>
+   				</ol>
+   			</li>
+   			<li>小写罗马字母
+   				<ol type="i">
+   					<li>第一</li>
+   					<li>第二</li>
+   					<li>第三</li>
+   				</ol>
+   			</li>
+   			<li>大写罗马字母
+   				<ol type="I">
+   					<li>第一</li>
+   					<li>第二</li>
+   					<li>第三</li>
+   				</ol>
+   			</li>
+   		</ol>
+   	<li><h2 id="div">div和span</h2></li>
+   		<ol>
+   			<li><h3>div</h3>
+   				层，块级元素，标签会自动换行 <br>
+   				常用于布局 <br>
+   				常用属性： <br>
+   				   align siv元素中内容的对齐方式 <br>
+   				   Example： <br>
+   				   <div align=center>
+   				   	层，块级元素，标签会自动换行 （占一整行，高度取决于内容） <br>
+   				   	第二层
+   				   </div>
+   				   ----没有br, div外第三层，自动换行
+   				   
+   			</li>
+   			<li>span标签 <br>
+   				块，行内元素，标签不会自动换行 <br>
+   				Example： <br>
+   				<span>
+   					块，行内元素，标签不会自动换行
+   				</span>
+   				    ----span外第二行，没有换行
+   			</li>
+   		</ol>
+
+
+   		<li><h2>格式化标签</h2>
+   			<ol>
+   				<li>font标签 设置字体相关属性 <br>
+   					例子 <br>
+   					size默认 1-7 <br>
+   					字体： face <br>
+   					<font color="red" face="Arial" size="5">例子</font><br>
+   					<font color="red" size="7">例子</font>
+   				</li>
+   				<li>
+   					pre  定义预格式化文本。保留文本中的空格和换行 <br>
+   					<pre>例        子</pre> <br>
+   					<pre>      例
+   					     子   </pre>
+   				</li>
+   				<li>
+   					粗体 <br>
+   					<b>粗体</b><br>
+   					<strong>粗体</strong><br>
+   					<i>加i 斜体</i><br>
+   					<u>u是加下划线</u><br>
+   					<del>del是中划线</del><br>
+   					下标---H2O 加sub<br>
+   					     H<sub>2</sub>O <br>
+   					上标---22  加sup <br>
+   					      2<sup>2</sup><br>
+
+
+   				</li>
+
+   			</ol>
+   		</li>
+   	<li><h2>a标签 超链接</h2>
+   		a href=“ 路径 ” 相对路径 本文件夹内的路径 和绝对路径无法访问（没有权限）<br>
+
+   		<a href="ubuntu.odt">ubuntu.odt</a><br>
+   		<a href="https://www.ariesmartin.com"> AriesMartin主站（原窗口打开）</a><br>
+   		默认"self"当前窗口打开，新开窗口“blank” 父窗口“parent” 顶级窗口“top”<br>
+   		<a href="https://www.ariesmartin.com" target="blank">AriesMartin主站（新窗口打开）加target ="blank"</a><br>
+   		<h3>锚点</h3>
+   		href指向 “#”为回到顶部<br>
+   		<a href="#">锚点</a><br>
+   		利用其他标签的id属性 <br>
+   		<a href="#hr">回到水平线标签 <font color="red">href地址要加”#“</a></font><br>
+   		<a href="#div">回到div标签 (id属性）</a><br>
+   	</li>
+   	<li><h2>图片标签</h2>
+   		<h4>img src（地址） 行内标签，不会自动换行<br>
+   		必须属性：src 引入图片地址 <br>
+   		常用属性： title 当鼠标悬停在图片上显示的文字 <br>
+   		         alt   当图片加载失败时显示的文本 <br>
+   		         width and height <br>
+   		         border 设置边框 <br>
+   		         align  对齐方式 left right center<br>
+   		         可套a标签加入链接 <br></h4>
+   		本地资源 宽度设置为500<br>
+   		<img src="My NAS/Unraid.png" width="500px" border="2"/>
+   		网络资源 加title属性<br>
+   		<img src="https://i0.hdslb.com/bfs/sycp/creative_img/202112/d9b745be4bb8e5e3262bc798b5e18ac2.jpg" title="高度设置为300" height="300"/><br>
+   		align 属性 加文本 <br>
+   		<div>
+   		测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字<img src="https://i0.hdslb.com/bfs/sycp/creative_img/202112/d9b745be4bb8e5e3262bc798b5e18ac2.jpg" align="center"/>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字 <br>
+   		</div>
+
+   		<br>
+   		加ALT属性 <br>
+   		<img src="https://i0.hdslb.com/bfs/sycp/creative_img/202112/d9b745be4bb8e5e3c2.jpg" title="B站盗图" alt="图片显示错误"/><br>
+   	</li>
+   	<li><h2>表格标签</h2>
+   		<h4>table   表示表格 <br>
+   		    tr      表示表格中的行   每一行可以包含一个或多个td或th <br>
+   		    td      表示表格中的标准单元格 <br>
+   		    th      表示表格中的表头  具有标题的效果： 字体加粗  居中<br>
+   		    <br>
+   		    table 常用属性： border 边框 <br>
+   		          css样式： style: collapse合并边框 <br>
+   		          valign: 单元格内对齐方式 top bottom <br>	          
+   		</h4>
+   		    <table border="1" width="500px" height="300px" style="border-collapse: collapse;">
+   		    	<tr align="center">
+   		    		<th >表头-班级</th>
+   		    		<th>姓名</th>
+   		    		<th>年龄</th>
+   		    		<th>性别</th>
+   		    	</tr>
+   		    	<tr align="center" valign="top" bgcolor="antiquewhite">
+   		    		<td>101班</td>
+   		    		<td>小明</td>
+   		    		<td>18</td>
+   		    		<td>男</td>
+   		    	</tr>
+   		    	<tr align="center">
+   		    		<td>102班</td>
+   		    		<td>小梅</td>
+   		    		<td>16</td>
+   		    		<td>女</td>
+   		    	</tr>
+   		    	<tr align="center">
+   		    		<td>102班</td>
+   		    		<td>小峰</td>
+   		    		<td>18</td>
+   		    		<td>男</td>
+   		    	</tr>
+   		    </table>
+   		<h4>合并单元格 <br>
+   			纵向合并： rowspan <br>
+   			
+   		</h4>
+
+   		 <table border="1" width="50%" style="border-collapse: collapse;">
+   		    	<tr align="center">
+   		    		<th >表头-班级</th>
+   		    		<th>姓名</th>
+   		    		<th>年龄</th>
+   		    		<th>性别</th>
+   		    	</tr>
+   		    	<tr align="center">
+   		    		<td>101班</td>
+   		    		<td>小明</td>
+   		    		<td>18</td>
+   		    		<td>男</td>
+   		    	</tr>
+   		    	<tr align="center">
+   		    		<td rowspan="2">102班</td>
+   		    		<td>小梅</td>
+   		    		<td>16</td>
+   		    		<td>女</td>
+   		    	</tr>
+   		    	<tr align="center">
+   		   
+   		    		<td>小峰</td>
+   		    		<td>18</td>
+   		    		<td>男</td>
+   		    	</tr>
+   		    </table>
+   		   <h4> 横向合并： colspan <br></h4>
+   		      <table border="1" width="500px" height="300px" style="border-collapse: collapse;">
+   		    	<tr align="center">
+   		    		<th colspan="2">班级+姓名</th>
+   		    		
+   		    		<th>年龄</th>
+   		    		<th>性别</th>
+   		    	</tr>
+   		    	<tr align="center" valign="top" bgcolor="antiquewhite">
+   		    		<td>101班</td>
+   		    		<td>小明</td>
+   		    		<td>18</td>
+   		    		<td>男</td>
+   		    	</tr>
+   		    	<tr align="center">
+   		    		<td>102班</td>
+   		    		<td>小梅</td>
+   		    		<td>16</td>
+   		    		<td>女</td>
+   		    	</tr>
+   		    	<tr align="center">
+   		    		<td>102班</td>
+   		    		<td>小峰</td>
+   		    		<td>18</td>
+   		    		<td>男</td>
+   		    	</tr>
+   		    </table>
+   	</li>
+   	<li><h2>Form 表单标签</h2>
+   		<h4>表单提交时，必须设置表单元素的name属性值，否则无法获取数据 <br>
+   			表单需要结合表单元素一起使用 <br>
+
+   			常用属性： <br>
+   		      action 提交表单的地址 <br>
+   		      method 提交方式：(不区分大小写) <br>
+   		          <align="right"> GET提交 <br>
+   		          <align="right"> POST提交 <br>
+   		      target 提交数据时打开窗口的方式 self blank<br>
+   		 </h4>
+   		    <font size="8" color="red"><b>GET与POST的区别</b></font> <br>
+   		    <font size="4"><b>
+   		    	<ol>
+   		    		<li>POST请求需要服务器支持，否则报错</li>
+   		    		<li>GET将传递数据全部跟在地址栏后面，POST不跟数据（会将数据存放在请求体中）</li>
+   		    		<li>GET请求相对于POST请求不安全</li>
+   		    		<li>GET请求传递长度有限，POST基本没有限制（长度与服务器相关）</li>
+   		    		<li>GET请求比POST请求快 2倍左右</li>
+   		    		<li>GET请求有缓存 会将数据存放在浏览器中 即本地磁盘，而POST请求无缓存</li>
+   		    	</ol>
+   		    </b></font>
+            <p>form action=https://www.ariesmartin.com method="get" target=blank</p>
+            <p>input type="text" name="name"</p>
+   		<form action=https://www.ariesmartin.com method="get" target=blank>
+   			姓名： <input type="text" name="name">
+   			<button>提交</button>
+   		</form>
+   		   		<form>
+   			年龄： <input type="text" name="age">
+   			<button>提交</button>
+   		</form>
+   	</li>
+   	<li><h2>INPUT元素</h2></li>
+   		<h3>type：  元素类型 <br>
+   			<h4><ol>
+   				<li>文本框：<input type="text"> input type="text"</li>
+   				<ul>
+   				<li>value: 元素的值 文本框：<input type="text" value="Example"></li>
+                <p>input type="text" value="Example" readonly=readonly</p>
+   				<li>readonly 只读属性 文本框：<input type="text" value="Example" readonly=readonly></li>
+   				<li>maxlength 最长大小 文本框：<input type="text" value="Example" maxlength="10"> <br />
+   				重置按钮：<input type="reset" value="重置按钮">
+   				</li>
+   				</ul>
+   				<li>密码框：<input type="password"></li>
+   				<li>单选框 input type="radio" value="man" name="sex"： <br>
+   					设置name值 标记为一组（同name名） <br>
+   					<input type="radio" value="man" name="sex">男
+   					<input type="radio" value="woman" name="sex">女
+   				</li>
+   				<li>
+   					<p>复选框：input type="checkbox" value="1" name="text"</p>
+                           <input type="checkbox" value="1" name="text">1
+   						   <input type="checkbox" value="2" name="text">2
+   						   <input type="checkbox" value="3" name="text">3
+   				</li>
+   				<li>
+   					文件域：<input type="file"> <br>
+   					如果是上传文件的表单，则表单需要设置一个属性： <br>
+   					<b>enctype="multipart/form-data"</b><br>
+   					提交方式要用POST请求 <br>
+   				</li>
+   				<li>隐藏域input type="hidden" value="admin"：<input type="hidden" value="admin">
+   				</li>
+   				<li>普通按钮input type="button" value=普通按钮 disabled=disabled：<input type="button" value=普通按钮 disabled=disabled> <br>
+   					disabled 禁用
+   				</li>
+   				<li>
+   					<form action="https://www.ariesmartin.com" method="get">
+   					提交按钮 input type="submit" value=提交按钮：<input type="submit" value=提交按钮>
+   					</form>
+   				</li>
+   				<li>
+   					日期框 input type="date"： <input type="date">
+   				</li>
+   			</ol></h4>
+   		</h3>
+   	<li><h2>textarea标签 文本域</h2></li>
+   		<h3>
+   			<ul>
+   			<li>
+   			定义可输入多行文本的控件  textarea cols="50" rows="10">/textarea> <br>
+   			cols 文本的可见宽度 <br>
+   			rows 文本的可见行  <br>
+   			姓名 <input type="text" name="name"><br>
+   			简介 <textarea cols="50" rows="10"></textarea>
+   			</li>
+   			<li>
+   				label标签 聚焦标记 <br>
+   				for属性：当for属性与元素的id属性值一致时，点击lable标签会自动元素聚焦 <br>
+                &lt;label for="name"&gt;姓名 &lt;/label&gt;:&lt;nput type="text" name="name" id="name"&gt;
+   				<label for="name">姓名</label>: <input type="text" name="name" id="name" >
+   			</li>
+   			</ul>
+   		</h3>
+   	<li><h2>按钮标签 button</h2>
+   			<h3>
+   				双标签，标签之间可以添加内容（文本或标签等） <br>
+   				不加type默认为提交按钮 <br>
+   				<ul>
+   				input按钮：
+   				<li>type= "button"</li>
+   				<li>type= "submit"</li>
+   				<li>type= "reset</li>
+   				</ul>
+   				<ul>
+   				button标签
+   				<li>type= "button"</li>
+   				<li>type="submit"</li>
+   				<li>type= "reset"</li>
+   				</ul>
+   				<form action="http://www.baidu.com">
+   					input按钮 <br>
+   					<input type="text" name=""> <br>
+   					<input type="button" value="普通按钮">
+   					<input type="submit" value="提交按钮">
+   					<input type="reset" value="重置按钮">
+   					<hr>
+   					button按钮 <br>
+   					<button type="button">普通按钮</button>
+   					<button type="submit">提交按钮</button>
+   					<button type="reset">重置按钮</button>
+   				</form>
+   			</h3>
+   	</li>
+   	<li><h2>select 下拉框</h2>
+   			<h3>
+   				由两个标签组成：
+   				1.select 下拉框选项 <br>
+   				2.option 下拉框选项 <br>
+   				常用属性： disabled，multiple, size， option selected默认选中项<br>
+   				value 提交给服务器的选项值，如果设置了value属性值则提交的是value的值，如果未设置则提交option双标签中的文本值 <br>
+   				<select name="city">
+   					<option>北京</option>
+   					<option>上海</option>
+   					<option>深圳</option>
+   					<option>广州</option>
+   				</select>  <br>
+   				多选属性：<br>
+   			     	<select name="city" multiple="multiple" size="2">
+   					<option value="bj">北京</option>
+   					<option>上海</option>
+   					<option>深圳</option>
+   					<option>广州</option>
+   				</select>  <br>
+   				默认选中项：<br>
+   			     	<select name="city">
+   					<option>请选择城市</option>
+   					<option selected>北京</option>
+   					<option>上海</option>
+   					<option>深圳</option>
+   					<option>广州</option>
+   				</select>  <br>
+
+   			</h3>
+   	</li>
+   	<li><h2>常用字符实体和标签的分类</h2></li>
+         <h3>
+             <  用 “&lt” 表示 <br>
+             >  用 "&gt" 表示 <br>
+             &lt;h2&gt;标题&lt;/h2&gt; <br>
+             空格效果： "&-nbsp"; <br>
+              &lt;h2&gt;标 &nbsp; &nbsp; &nbsp; &nbsp;题&lt;/h2&gt; <br>
+              版权符号： "&-copy"; <br>
+              版权声明&copy; <br>
+         </h3>
+</ol>
+</body>
+</html>

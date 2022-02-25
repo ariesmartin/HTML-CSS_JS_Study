@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>CSS学习</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<!-- 样式设置在style标签中-->
+<style type="text/css">
+	body{
+		background-color: antiquewhite; /*背景颜色*/
+		color: black;
+		font-family: "arial light";
+	}
+</style>
+</head>
+<body>
+    <ol type="I">
+    	<li><h2>CSS格式 </h2>
+    		<ul>
+    			<li>样式设置在style标签中, 以；结尾</li>
+    			<li>声明要用{} 一行一个属性</li>
+    			<li>如果属性值由多个单词组成，要给值加上引号</li>
+    			<li>注释为 /* 注释内容 */</li>
+    		</ul>
+    	</li>
+    	<li><h2>行内式、嵌入式、引入式</h2>
+    		<ul>
+    			<li>行内样式 <br>
+    				将样式定义在html标签上的style属性中 <br>
+    				以行内样式写的CSS耦合度较高 <br>
+    				<p class="p2" style="color: red;font-family: 黑体;">这是一段p标签文本</p>
+    			</li>
+    			<li>内部样式 <br>
+    				写在head内 style标签 <br>
+    				<style type="text/css">
+    				.p{                     /*定义所有p标签*/
+    					color: firebrick;
+    					font-family: 楷体;
+    				}
+    				</style>
+    				<p class="p">这是一段p标签文本</p>
+    				<p class="p">这是一段p标签文本</p>
+    				<p class="p">这是一段p标签文本</p>
+    			</li>
+    			<li>
+    				外部引入 <br>
+    				<div style="background-color：none; color: red;font-size: 25px;font-weight: bold;">引入外部css文件： &lt;link rel=“stylesheet（样式表,与当前资源关系）” type=“text/css” href=“位置”&gt;</div>
+    			</li>
+    		</ul>
+    		<h3>优先级： 就近原则 行内优先级最高</h3>
+    	</li>
+    	<li><h2>基本选择器</h2>
+    		<ol>
+    			<li>通用选择器</li>
+    				选择所有元素 <br>
+    				*{  <br>
+    					  属性名：属性值  <br>
+    				} <br>
+    			</li>
+    			<li>元素选择器（标签选择器）
+    				选择制定元素 <br>
+    				标签名 { <br>
+    						属性名：属性值  <br>
+    				} <br>
+    			<li>id选择器</li>
+    				选择制定id属性值的元素 <br>
+    				id定义规则：以字母、数字、下划线、中划线组成，不要以数字开头 <br>
+    				#id属性值{ <br>
+    					属性名：属性值 <br>
+    			  	} <br>
+    			</li>	
+    			<li>类选择器
+    				选择设置指定class属性值的元素 <br>
+    				.class属性值{ <br>
+    						属性名：属性值 <br>
+    				}<br>
+
+    				<style type="text/css">
+    					.c1{
+    						font-size: 30px;
+    						font-weight: bold;
+    					}
+    					.c2{
+    						font-size: 15px;
+    						color: blueviolet;
+    					}
+    				</style>
+    				<div class="c1">这是一段文字</div>
+    				<div>这是一段文字</div>
+    				<div class="c2">这是一段文字</div>
+    			</li>
+    			<li>分组选择器</li>
+    				选择制定选择器选中的元素 <br>
+    				选择器1,选择器2,选择器3(中间，隔开）...{ <br>
+    						属性名：属性值  <br>
+    					} <br>
+    					<style type="text/css">
+    						#div2,.d1{
+    							width: 100px;
+    							height: 100px;
+    							border: 1px solid darkred; /*边框：粗细、风格、颜色*/
+    							color: blue;
+    						}
+
+    					</style>
+    				<div class="d1"> 这是一段class：d1文字</div>
+    				<div id="div2">这是一段id:div2文字</div>
+    				<div class="d2">这是一段class:d2文字</div>
+    				<p>这是P标签文字</p>
+    		</ol>
+    		<h3>选择器的优先级： <br>
+    			id选择器（权重100） > 类选择器（权重10）> 元素选择器 （权重1）> 通用选择器 <br>
+    			行内样式 style属性 优先级最高 (权重1000）</h3>
+    	</li>
+    	<li><h2>组合选择器</h2>
+    		<ol>
+    			<li><b>后代选择器 （以空格分隔）</b> <br>
+    					选择制定元素的所有的后代元素 <br>
+    					<style type="text/css">
+    						.food li {
+    							border: 1px solid chocolate;
+    							color: cyan;
+    						}
+    					</style>
+
+    					<h3>食物</h3>
+    					<ul class="food">
+    						<li>水果
+    								<ul>
+    									<li>香蕉</li>
+    									<li>苹果</li>
+    									<li>梨</li>
+    								</ul>
+    						</li>
+    						<li>蔬菜
+    								<ul>
+    									<li>白菜</li>
+    									<li>油菜</li>
+    									<li>卷心菜</li>
+    								</ul>
+    						</li>
+    					</ul>
+    			</li>
+    			<li><b>子元素选择器（以大于号分隔）</b><br>
+    					选择制定元素的第一元素 只会找第一代 <br>
+    					<style type="text/css">
+    						.food1 > li{
+    								color: firebrick;
+    								border: 1px solid chocolate;
+    						}
+    					</style>
+    					<h3>食物</h3>
+    					<ul class="food1">
+    						<li>水果
+    								<ul>
+    									<li>香蕉</li>
+    									<li>苹果</li>
+    									<li>梨</li>
+    								</ul>
+    						</li>
+    						<li>蔬菜
+    								<ul>
+    									<li>白菜</li>
+    									<li>油菜</li>
+    									<li>卷心菜</li>
+    								</ul>
+    						</li>
+    					</ul>
+    			</li>
+
+    			<li><b>相邻兄弟选择器（以加号分隔） </b><br>
+    					选择指定元素的相邻的下一个指定元素（只会向下找一个） <br>
+    					<style type="text/css">
+    						#d + div{
+    							color: chocolate;
+    						}
+    					</style>
+    					<div id="d">
+    						相邻兄弟选择器1
+    						<ul>
+    							<li>开心麻花</li>
+    							<li>贾玲</li>
+    							<li>送小宝</li>
+    						</ul>
+    					</div>
+    					<div>
+    						相邻兄弟选择器2
+    					</div>
+    					<div>
+    						相邻兄弟选择器3
+    					</div>
+    				
+    			</li>
+    			<li><b>普通兄弟选择器（以波浪号分隔） </b><br>
+    					选择指定元素后的指定同级元素（只会向下找一个） <br>
+   						<style type="text/css">
+    						#t ~ li{
+    							color: blue;
+    						}
+    					</style>
+    					<div>
+    						相邻兄弟选择器1
+    						<ul>
+    							<li id="t">开心麻花</li>
+    							<li>贾玲</li>
+    							<li>送小宝</li>
+    						</ul>
+    					</div>
+    					<div>
+    						相邻兄弟选择器2
+    					</div>
+    					<div>
+    						相邻兄弟选择器3
+    					</div>
+
+    			</li>
+    		</ol>
+    	</li>
+    <li><h2>背景</h2>
+    	background-color： 颜色; <br>
+    	background-image: url(地址)； <br>
+    	设置背景图片是否重复 <br>
+    	background-repeat: not-repeat； <br>
+    	background-repeat: repeat-x； x横向重复 y纵向重复<br>
+    	设置背景图片大小 <br>
+    	background-size: auto或数值 <br>
+    </li>
+    <li><h2>文本</h2>
+    	<style type="text/css">
+    		#div5{
+    			/*color: #0000FF;* 16进制*/ 
+    			color: rgb(255, 0, 0);
+    		}
+
+    		#div6{
+    			text-align: center;
+    		}
+
+    		#div7{
+    			text-decoration: line-through;
+    		}
+
+    		#div8{
+    			text-decoration: overline underline line-through;
+    		}
+    		a{
+    			text-decoration: none;
+    		}
+    		#p1{
+    			text-indent: 5em;
+    		}
+    	</style>
+    	<div id="div5">文本1</div>
+    	<div id="div6">文本2</div>
+    	上划线：overline <br>
+    	下划线：underline <br>
+    	中划线：line-through <br>
+    	<div id="div7">文本7</div>
+    	同时设置上中下划线 <br>
+    	<div id="div8">文本8</div>
+    	去除a标签的下划线 <br>
+    	<a href="http://www.baidu.com">a标签</a> <br>
+    	首行缩进 一个em是一个字符位 text-indent: 5em;<br>
+    	<p id="p1">一段文字，首行缩进</p>  	
+    </li>
+    <li><h2>字体</h2>
+    	<style type="text/css">
+    		/*设置字体*/
+    		.div9{
+    			font-family: 楷体,宋体,黑体,"agency fb";
+    			font-size: 30px;
+    			font-style: oblique;
+    			font-weight:  700;
+    		}
+    	</style>
+    	当font-family的属性值包含空格或特殊字符时，需要将属性值用引号括起来  <br>
+    	font-family有后备机制，可以为元素设置多种字体，当浏览器不识别第一种字体时，会尝试找下一种字体  <br>
+    	font-style 设置字体风格：normal，italic 斜体 oblique 强制斜体 <br>
+    	font-weight 字体粗细: bold 粗体 100-900 不同粗细值  400正常字体 700粗体 <br>
+    	<div class="div9">这是一段文本</div>
+    </li>
+    <li><h2>对齐方式</h2>
+    	text-align: left; right; center; justify 两段对齐  <br>
+    </li>
+    <li><h2>display属性</h2>
+    	规定元素生成框的类型 <br>
+    	block --- 元素会被显示，且元素会变成快级元素，元素前后会有换行符 可以设置宽高和边距<br>
+    	none  --- 元素会被隐藏  <br>
+    	inline --- 元素会显示为行内元素，元素前后不会有换行符   <br>
+    	inline-block --- 行内块级元素  可以设置宽高但不会自动换行 <br>
+    	<style type="text/css">
+    		#sp2{
+    			display: none;
+    		}
+    		#sp3{
+    			display: block;
+    		}
+    		#i1{
+    			background-color: red;
+    		}
+    		#i2{
+    			background-color: yellow;
+    		}
+    		#i3{
+    			background-color: blue;
+    		}
+    		#i1,#i2,#i3{
+    			display: inline;
+    		}
+    		#w1,#w2{
+    			width: 200px;
+    			height: 200px;
+    			background-color: green;
+    			display: inline-block;
+    		}
+    	</style>
+    	span2被隐藏 none  <br>
+    	<span id="sp1">span1</span>
+    	<span id="sp2">span2</span>
+    	<span id="sp3">span3</span> <br>
+    	将div从块元素改为行内元素：inline 不会换行 <br>
+    	<div id="i1">div1</div>
+    	<div id="i2">div2</div>
+    	<div id="i3">div3</div> <br>
+    	将p元素改为行内块元素不会换行但可以设置宽高 <br>
+    	<p id="w1">p标签文本1</p>
+    	<p id="w2">p标签文本2</p>
+    </li>
+    <li><h2>浮动</h2>
+    	<style type="text/css">
+    		#d1{
+    			width: 100px;
+    			height: 100px;
+    			background-color: aqua;
+    			float: left;
+    		}
+    		#d2{
+    			width: 100px;
+    			height: 100px;
+    			background-color: chartreuse;
+    			float: left;
+    		}
+    		img{
+    			width: 500px;
+    			height: 300px;
+    			float: left;
+    		}
+    	</style>
+    	只能横向浮动，不能纵向浮动 <br>
+    	<div id="d1"></div>
+    	<div id="d2"></div>
+    	
+    	
+    	
+    	<div style="clear: both;"></div>
+    	清除浮动： div style="clear:both;" <br>
+    	<hr>
+    	<div>
+    		样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本
+    		<img src="My NAS/PVE.png">
+    		样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本样本
+    	</div>
+    	<div style="clear: both;"></div>
+    </li>
+    <li><h2>盒子模型</h2>
+         <style type="text/css">
+                        #im1{
+                            width: 500px;
+                            height: 300px;
+                        }
+                        #border1{
+                            border: 2px hotpink dotted;
+                        }
+                        #border2{
+                            border-style: groove solid inset outset;
+                            border-color: red blue yellow;
+                            border-width: 5px;
+
+                        }
+                    </style>
+        <div id="im1">
+    		<img src="box.png">
+        </div>
+            <ol>
+                <li><h3>border：</h3>
+                    <ul>
+                        <li>可设置元素边框的宽度，颜色类型 </li>
+                        <li>单独设置边框的颜色、宽度、类型 ： border-color; border-width; border-style </li>
+                        <li>solid实心线； dotted点状线；dashed虚线; double双层线；groove 3D沟槽边框；ridge 3D脊边框；inset 3D嵌入边框；outset 3D突出边框</li>
+                        <li>顺序：上、右、下、左  </li>
+                        <li>合并边框: border-collapse 表格合并为一条线</li>
+                   
+                        <div id="border1">这是一段div文本</div>
+                        <hr>
+                        <div id="border2">这是一段div文本</div>
+                        <hr>
+                        <table border="2" style="border-collapse: collapse;">
+                            <tr><th>Head</th><th>body</th></tr>
+                            <tr><td>Data</td><td>Data</td></tr>
+                        </table>
+                    </ul>
+                </li>
+                <li><h3>padding 内边距</h3>
+                    <style type="text/css">
+                        td{
+                            padding: 10px 20px;
+                        }
+                    </style>
+                    可设置单独一边边距： paddig-top -left -right -bottom <br>
+                    <table border="1" width="500px" align="center" style="border-collapse: collapse;">
+                        <tr align="center">
+                            <th>班级</th>
+                            <th>姓名</th>
+                            <th>年龄</th>
+                            <th>性别</th>
+                        </tr>
+                        <tr align="center" valign="top" bgcolor="red">
+                            <td>101班</td>
+                            <td>张三</td>
+                            <td>18</td>
+                            <td>男</td>
+                        </tr>
+                    </table>
+                </li>
+                <li><h3>margin 外边距</h3>
+                    可设置单独一边边距： margin-top -left -right -bottom <br>
+                    <style type="text/css">
+                        p{
+                            background-color: #00FFFF;
+                        }
+                        #ma1{
+                            margin: 50px 100px;
+                        }
+                    </style>
+                    <p id="ma1"> margin文本</p>
+                    <p id="ma2"> margin文本</p>
+                </li>
+            </ol>
+    </li>
+    </ol>
+</body>
+</html>

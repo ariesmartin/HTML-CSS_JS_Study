@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors martin (martin@ariesmartin.com)
+ * @date    2022-02-25 20:36:29
+ * @version $Id$
+ */
+.main{
+	background-color: #f0f0f0;
+	margin: 0 15%;
+}
+
+h1{
+	color: white;
+	background-color: cornflowerblue;
+	height: 70px;
+	text-indent: 2em;
+	line-height: 70px;  /*行间距 与高度一直则显示在中间*/
+}
+
+#nav{
+	text-align: center;
+}
+
+/*找nav后面的li 用后代选择器*/
+#nav li{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	background-color: cornflowerblue;
+	
+	line-height: 30px;
+	border: 1px solid cornflowerblue;
+	border-radius: 0 10px; /*边框圆角 左下角和右上角弧度*/
+}
+
+#nav li a{
+	text-decoration: none;
+	color: white;
+}
+
+/*设置a标签的伪类选择器： hover 设置字体加粗*/
+#nav li a:hover{
+	font-weight: bold;
+}
+
+/*图像与视频之间左右间距*/
+.imgma{
+	margin: 0 20px;
+}
+
+.imgv{
+	text-align: center;
+}
+
+.vidma{
+	margin: 0 20px;
+}
+
+.information{
+	margin: 50px;
+	text-align: justify;
+}
+
+.information p{
+	text-indent: 3em;
+	line-height: 30px;
+}
+
+#win th{
+	height: 50px;
+	width: 200px;
+	text-align: center;
+}
+
+#win td{
+	text-align: center;
+}
+
+textarea{
+	width: 100%;
+	height: 100px;
+}
+
+#backtop{
+	text-align: center;
+	text-decoration: none;
+}
+
+#banquan{
+	text-align: center;
+	background-color: cornflowerblue;
+	color: white;
+	height: 70px;
+	line-height: 70px;
+	font-size: 13px;
+}
+
